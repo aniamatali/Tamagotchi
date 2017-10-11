@@ -1,0 +1,46 @@
+
+<h1>Tamagotchi</h1>
+<p>Name: @Model.GetName()</p>
+
+<div id="idfood">
+<style>
+#idfood {width:@Model.GetFood()%;}
+#idfood {background-color: red;}
+</style>
+<p>Food: @Model.GetFood()</p>
+</div>
+
+<div id="idattention">
+<style>
+#idattention {width:@Model.GetAttention()%;}
+#idattention {background-color: green;}
+</style>
+<p>Attention: @Model.GetAttention()</p>
+</div>
+
+<div id="idrest">
+<style>
+#idrest {width:@Model.GetRest()%;}
+#idrest {background-color: blue;}
+</style>
+<p>Rest: @Model.GetRest()</p>
+</div>
+
+
+<form action="/feed" method="post">
+  <button type="submit" name="button">FEED</button>
+</form>
+
+<form action="/sleep" method="post">
+  <button type="submit" name="button">SLEEP</button>
+</form>
+
+<form action="/attention" method="post">
+  <button type="submit" name="button">ATTENTION</button>
+</form>
+
+<form action="/pass" method="post">
+  <button type="submit" name="button">PASS</button>
+</form>
+
+<a href="/">Home</a>
